@@ -3,3 +3,34 @@
 @{
 }
 <h1>Lista de Citas</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>ID Cita</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>Hours</th>
+            <th>Code Hospital</th>
+            <th>Code Doctor</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Citas)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.IdCita</td>
+                <td>@item.Name</td>
+                <td>@item.LastName</td>
+                <td>@item.Hour</td>
+                <td>@item.CodeHospital</td>
+                <td>@item.CodeNumber</td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-area="" asp-page="/EditCitas">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -3,3 +3,30 @@
 @{
 }
 <h1>Listado de Hospitales</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code Hospital</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Cellphone</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Hospitals)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.CodeHospital</td>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.Cellphone</td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-area=""  asp-page="/EditHospital">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
