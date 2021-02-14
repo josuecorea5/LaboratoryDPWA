@@ -7,8 +7,7 @@ namespace CitasSystem.Models
 {
     public class Doctors : EntityBase
     {
-        [Required]
-        [MinLength(5, ErrorMessage ="El numero de caracteres debe ser mayor a 5")]
+        [Required(ErrorMessage ="El numero de caracteres debe ser mayor a 5")]
         public int CodeNumber { get; set; }
         [Required(ErrorMessage ="Campo no debe quedar vacío")]
         public string Name { get; set; }

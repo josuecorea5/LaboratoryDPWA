@@ -1,0 +1,29 @@
+﻿@page
+@model CitasSystem.Web.Pages.CreateHospitalModel
+@{
+}
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group">
+        <label asp-for="Hospital.CodeHospital"></label>
+        <input type="number" class="form-control" asp-for="Hospital.CodeHospital" placeholder="Ingrese su código">
+        <span class="text-danger" asp-validation-for="Hospital.CodeHospital"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Hospital.Name"></label>
+        <input type="text" class="form-control" asp-for="Hospital.Name" placeholder="Ingrese su nombre">
+        <span class="text-danger" asp-validation-for="Hospital.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Hospital.Address"></label>
+        <input type="text" class="form-control" asp-for="Hospital.Address" placeholder="Ingrese su dirección">
+        <span class="text-danger" asp-validation-for="Hospital.Address"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Hospital.Cellphone"></label>
+        <input type="number" class="form-control" asp-for="Hospital.Cellphone" placeholder="Ingrese su teléfono">
+        <span class="text-danger" asp-validation-for="Hospital.Cellphone"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button> <br />
+    <a asp-page="/Hospitales">Volver</a>
+</form>

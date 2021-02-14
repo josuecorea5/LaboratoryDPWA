@@ -1,0 +1,39 @@
+﻿@page
+@model CitasSystem.Web.Pages.CreateCitasModel
+@{
+}
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group">
+        <label asp-for="Citas.IdCita"></label>
+        <input type="number" class="form-control" asp-for="Citas.IdCita" placeholder="Ingrese su código">
+        <span class="text-danger" asp-validation-for="Citas.IdCita"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Citas.Name"></label>
+        <input type="text" class="form-control" asp-for="Citas.Name" placeholder="Ingrese su nombre">
+        <span class="text-danger" asp-validation-for="Citas.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Citas.LastName"></label>
+        <input type="text" class="form-control" asp-for="Citas.LastName" placeholder="Ingrese su apellido">
+        <span class="text-danger" asp-validation-for="Citas.LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Citas.Hour"></label>
+        <input type="datetime" class="form-control" asp-for="Citas.Hour" placeholder="Ingrese fecha y hora">
+        <span class="text-danger" asp-validation-for="Citas.Hour"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Citas.CodeHospital"></label>
+        <input type="number" class="form-control" asp-for="Citas.CodeHospital" placeholder="Ingrese código de hospital">
+        <span class="text-danger" asp-validation-for="Citas.CodeHospital"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Citas.CodeNumber"></label>
+        <input type="number" class="form-control" asp-for="Citas.CodeNumber" placeholder="Ingrese código de doctor">
+        <span class="text-danger" asp-validation-for="Citas.CodeNumber"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button> <br />
+    <a asp-page="/Citas">Volver</a>
+</form>

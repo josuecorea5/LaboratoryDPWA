@@ -7,8 +7,7 @@ namespace CitasSystem.Models
 {
     public class Citas : EntityBase
     {
-        [Required]
-        [MinLength(5, ErrorMessage = "El código no debe ser menor de 5 caracteres")]
+        [Required(ErrorMessage = "El código no debe ser menor de 5 caracteres")]
         public int IdCita { get; set; }
         [Required(ErrorMessage = "Esta campo no puede quedar vacío")]
         public string Name { get; set; }

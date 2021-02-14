@@ -3,6 +3,7 @@
 @{
 }
 <h1>Lista de Citas</h1>
+<a class="btn btn-sm btn-success" asp-page="/CreateCitas">New Cita</a> <br /> <br />
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -28,7 +29,8 @@
                 <td>@item.CodeHospital</td>
                 <td>@item.CodeNumber</td>
                 <td>
-                    <a class="btn btn-sm btn-info" asp-area="" asp-page="/EditCitas">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-area="" asp-page="/EditCita" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-area="" asp-page="/DeleteCitas" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

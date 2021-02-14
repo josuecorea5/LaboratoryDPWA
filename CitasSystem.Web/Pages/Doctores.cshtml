@@ -3,6 +3,10 @@
 @{
 }
 <h1>Lista de Doctores</h1>
+
+<a class="btn btn-sm btn-success" asp-page="/CreateDoctors">New Doctor</a>
+<br />
+<br />
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -26,7 +30,8 @@
                 <td>@item.Specialty</td>
                 <td>@item.Schedule</td>
                 <td>
-                    <a class="btn btn-sm btn-info" asp-area="" asp-page="/EditDoctors">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-area="" asp-page="/EditDoctors" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-area="" asp-page="/DeleteDoctors" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

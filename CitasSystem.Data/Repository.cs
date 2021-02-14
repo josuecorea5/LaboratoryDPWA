@@ -17,9 +17,9 @@ namespace CitasSystem.Data
         {
             _dbContext = dbContext;
         }
-        public virtual T GetById(int Id)
+        public virtual T GetById(int id)
         {
-            return _dbContext.Set<T>().Find();
+            return _dbContext.Set<T>().Find(id);
         }
 
         public virtual IEnumerable<T> List()
